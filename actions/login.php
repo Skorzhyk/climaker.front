@@ -14,10 +14,9 @@ if ($userId) {
 
     $_SESSION['userId'] = $userId;
 
-    header('Location: ../');
+    header('Location: /');
 } else {
     $response = 'Incorrect email or password';
 
-    require_once '../frontend/login.php';
-    exit();
+    require_once $_SERVER['DOCUMENT_ROOT'] . '/frontend/login.php';
 }

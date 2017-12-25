@@ -24,4 +24,4 @@ if (!empty($_REQUEST['id'])) {
     request('template/create', $data);
 }
 
-header('Location: ../templates.php');
+header('Location: /templates.php');

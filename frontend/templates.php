@@ -38,7 +38,7 @@
 <form action="/actions/editTemplate.php" method="post">
     <div class="oneOfTemplates" hidden>
         <div class="template-name">
-            <input class="param-input" name="name" placeholder="Name (only letters and numbers)" pattern="^[a-zA-Z0-9]+$" required hidden>
+            <input class="param-input" name="name" placeholder="Name (letters and numbers)" pattern="^[a-zA-Z0-9 ]+$" required hidden>
         </div>
         <div class="template-params">
             <div class="template-param">

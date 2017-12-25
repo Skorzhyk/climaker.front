@@ -14,5 +14,5 @@ if (!empty($_REQUEST['response'])) {
     $response = '';
 }
 
-require_once 'frontend/userData.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/frontend/userData.php';
 

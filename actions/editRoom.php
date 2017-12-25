@@ -14,7 +14,7 @@ if (!empty($_REQUEST['id'])) {
 
     request('room/edit', $data);
 
-    header('Location: ../room.php?id=' . $_REQUEST['id']);
+    header('Location: /room.php?id=' . $_REQUEST['id']);
 } else {
     $data = [
         'name' => $_REQUEST['name'],
@@ -25,5 +25,5 @@ if (!empty($_REQUEST['id'])) {
 
     request('room/create', $data);
 
-    header('Location: ../');
+    header('Location: /');
 }

@@ -6,19 +6,19 @@
             Sign up to CliMaker
         </div>
         <div class="user-input">
-            <input type="email" name="email">
+            <input type="email" name="email" placeholder="E-mail">
         </div>
         <div class="user-input">
-            <input name="name">
+            <input name="name" placeholder="Name (only letters)" pattern="^[a-zA-Z]+$" required>
         </div>
         <div class="user-input">
-            <input name="surname">
+            <input name="surname" placeholder="Surname (only letters)" pattern="^[a-zA-Z]+$" required>
         </div>
         <div class="user-input">
-            <input name="telephone_number">
+            <input type="tel" name="telephone_number" placeholder="Telephone number" required>
         </div>
         <div class="user-input">
-            <input type="password" name="password">
+            <input type="password" name="password" placeholder="Password" required>
         </div>
         <div id="response">
             <?php if (!empty($response)) { echo $response; } ?>

@@ -9,4 +9,4 @@ $data = [
 
 $rooms = request('room/getall', $data);
 
-require_once 'frontend/rooms.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/frontend/rooms.php';

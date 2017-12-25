@@ -8,4 +8,4 @@ $data = [
 
 request('template/delete', $data);
 
-header('Location: ../templates.php');
+header('Location: /templates.php');

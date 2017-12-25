@@ -17,5 +17,5 @@ $data = [
 
 $templates = request('template/getall', $data);
 
-require_once 'frontend/roomData.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/frontend/roomData.php';
 

@@ -17,4 +17,4 @@ if ($response) {
     $response = 'bad';
 }
 
-header('Location: ../user.php?response=' . $response);
+header('Location: /user.php?response=' . $response);

@@ -14,7 +14,7 @@
         <div class="current" id="current-name">
             <?php if (!empty($room)) echo $room['name'] ?>
         </div>
-        <input class="param-input" name="name" value="<?php if (!empty($room)) echo $room['name'] ?>" placeholder="Name (only letters and numbers)" pattern="^[a-zA-Z0-9]+$" required hidden>
+        <input class="param-input" name="name" value="<?php if (!empty($room)) echo $room['name'] ?>" placeholder="Name (letters and numbers)" pattern="^[a-zA-Z0-9 ]+$" required hidden>
     </div>
     <div class="room-params">
         <div class="room-param">

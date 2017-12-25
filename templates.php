@@ -9,4 +9,4 @@ $data = [
 
 $templates = request('template/getall', $data);
 
-require_once 'frontend/templates.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/frontend/templates.php';

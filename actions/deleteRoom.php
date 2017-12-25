@@ -8,4 +8,4 @@ $data = [
 
 request('room/delete', $data);
 
-header('Location: ../');
+header('Location: /');
