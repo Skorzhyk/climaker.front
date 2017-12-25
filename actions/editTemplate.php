@@ -1,14 +1,27 @@
 <?php
 
+session_start();
+
 require_once '../api.php';
 
-$data = [
-    'id' => $_REQUEST['id'],
-    'name' => $_REQUEST['name'],
-    'temperature' => $_REQUEST['temperature'],
-    'humidity' => $_REQUEST['humidity']
-];
+if (!empty($_REQUEST['id'])) {
+    $data = [
+        'id' => $_REQUEST['id'],
+        'name' => $_REQUEST['name'],
+        'temperature' => $_REQUEST['temperature'],
+        'humidity' => $_REQUEST['humidity']
+    ];
 
-request('template/edit', $data);
+    request('template/edit', $data);
+} else {
+    $data = [
+        'name' => $_REQUEST['name'],
+        'user_id' => $_SESSION['userId'],
+        'temperature' => $_REQUEST['temperature'],
+        'humidity' => $_REQUEST['humidity']
+    ];
+
+    request('template/create', $data);
+}
 
 header('Location: ../templates.php');

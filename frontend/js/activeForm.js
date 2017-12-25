@@ -1,21 +1,9 @@
-$(function() {
-    var id = $('#room-id').val();
-    if (!id) {
-        active();
-    }
-
-    $('body').on('click', '#main-button', function () {
-        if ($(this).hasClass('edit')) {
-            return active();
-        }
-    });
-});
-
-function active() {
-    $('.current').hide();
-    $('.param-input').show();
-    $('#main-button').text('Save');
-    $('#main-button').removeClass('edit');
+function active(elem) {
+    elem.find('.oneOfTemplates').show();
+    elem.find('.current').hide();
+    elem.find('.param-input').show();
+    elem.find('#main-button').text('Save');
+    elem.find('#main-button').removeClass('edit');
 
     return false;
 }

@@ -1,6 +1,8 @@
 <?php require_once 'header.php' ?>
 
-<button id="main-button" href="../actions/editRoom.php"> New </button>
+<a href="room.php">
+    <button id="main-button"> New </button>
+</a>
 
 <div>
     <?php foreach ($rooms as $room) : ?>

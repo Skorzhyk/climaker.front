@@ -9,13 +9,13 @@
             <input name="name" value="<?php echo $user['name'] ?>" placeholder="Name">
         </div>
         <div class="user-input">
-            <input class="user-input" name="surname" value="<?php echo $user['surname'] ?>" placeholder="Surname">
+            <input class="user-input" name="surname" value="<?php echo $user['surname'] ?>" placeholder="Surname" required>
         </div>
         <div class="user-input">
-            <input class="user-input" name="telephone_number" value="<?php echo $user['telephone_number'] ?>" placeholder="Telephone number">
+            <input class="user-input" name="telephone_number" value="<?php echo $user['telephone_number'] ?>" placeholder="Telephone number" required>
         </div>
         <div class="user-input">
-            <input class="user-input" name="current_password" placeholder="Current password">
+            <input class="user-input" name="current_password" placeholder="Current password" required>
         </div>
         <div class="user-input">
             <input class="user-input" name="new_password" placeholder="New password">

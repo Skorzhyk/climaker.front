@@ -3,7 +3,7 @@
 function request($url, $params = []) {
     $myCurl = curl_init();
     curl_setopt_array($myCurl, array(
-        CURLOPT_URL => 'http://climaker.dev/' . $url,
+        CURLOPT_URL => 'https://skorzhyk.000webhostapp.com/' . $url,
         CURLOPT_RETURNTRANSFER => true,
         CURLOPT_POST => true,
         CURLOPT_POSTFIELDS => 'data=' . json_encode($params)
