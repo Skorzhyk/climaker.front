@@ -1,6 +1,6 @@
-<?php require_once 'config.php' ?>
+<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/frontend/config.php' ?>
 
-<form action="../actions/login.php" method="post">
+<form action="/actions/login.php" method="post">
     <div id="sign-data">
         <div>
             Sign in to CliMaker

@@ -1,4 +1,4 @@
 <?php
 
-require_once 'check.php';
-require_once 'allRooms.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/check.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/allRooms.php';

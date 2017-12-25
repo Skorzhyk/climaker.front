@@ -1,6 +1,6 @@
-<?php require_once 'header.php' ?>
+<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/frontend/header.php' ?>
 
-<form action="../actions/editUser.php?id=<?php echo $user['id'] ?>" method="post">
+<form action="/actions/editUser.php?id=<?php echo $user['id'] ?>" method="post">
     <div id="user-data">
         <div>
             <?php echo $user['email'] ?>

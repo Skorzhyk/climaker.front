@@ -1,7 +1,7 @@
 <?php
 
-require_once 'api.php';
-require_once 'check.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/api.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/check.php';
 
 $data = [
     'id' => $_SESSION['userId']

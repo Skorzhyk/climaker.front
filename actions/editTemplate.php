@@ -2,7 +2,7 @@
 
 session_start();
 
-require_once '../api.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/api.php';
 
 if (!empty($_REQUEST['id'])) {
     $data = [

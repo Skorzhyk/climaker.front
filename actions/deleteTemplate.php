@@ -1,6 +1,6 @@
 <?php
 
-require_once '../api.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/api.php';
 
 $data = [
     'id' => $_REQUEST['id']

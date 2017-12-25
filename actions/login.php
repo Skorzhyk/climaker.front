@@ -1,6 +1,6 @@
 <?php
 
-require_once '../api.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/api.php';
 
 $data = [
     'email' => $_REQUEST['email'],
@@ -19,4 +19,5 @@ if ($userId) {
     $response = 'Incorrect email or password';
 
     require_once '../frontend/login.php';
+    exit();
 }
