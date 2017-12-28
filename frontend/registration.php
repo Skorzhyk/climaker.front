@@ -1,5 +1,9 @@
 <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/frontend/config.php' ?>
 
+<a href="/frontend/login.php">
+    <button id="change-sign-button"> Sign in </button>
+</a>
+
 <form action="/actions/registration.php" method="post">
     <div id="sign-data">
         <div>

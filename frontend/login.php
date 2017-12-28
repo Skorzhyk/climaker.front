@@ -1,7 +1,7 @@
 <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/frontend/config.php' ?>
 
 <a href="/frontend/registration.php">
-    <button id="registration-button"> SIgn up </button>
+    <button id="change-sign-button"> Sign up </button>
 </a>
 
 <form action="/actions/login.php" method="post">

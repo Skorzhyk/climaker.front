@@ -14,7 +14,7 @@
         <div class="current" id="current-name">
             <?php if (!empty($room)) echo $room['name'] ?>
         </div>
-        <input class="param-input" name="name" value="<?php if (!empty($room)) echo $room['name'] ?>" placeholder="Name (letters and numbers)" pattern="^[a-zA-Z0-9 ]+$" required hidden>
+        <input class="param-input" name="name" value="<?php if (!empty($room)) echo $room['name'] ?>" placeholder="Name (letters or numbers)" pattern="^[a-zA-Z0-9 ]+$" required hidden>
     </div>
     <div class="room-params">
         <div class="room-param">
@@ -22,14 +22,14 @@
             <div class="room-param-value current">
                 <?php if (!empty($room)) echo $room['current_temperature'] . '°C' ?>
             </div>
-            <input type="number" class="room-param-input param-input" name="temperature" value="<?php if (!empty($room)) echo $room['custom_temperature'] ?>" required hidden>
+            <input class="room-param-input param-input" name="temperature" value="<?php if (!empty($room)) echo $room['custom_temperature'] ?>" pattern="[0-9]{1,2}" required hidden>
         </div>
         <div class="room-param">
             <div> Humidity </div>
             <div class="room-param-value current">
                 <?php if (!empty($room)) echo $room['current_humidity'] . ' %' ?>
             </div>
-            <input type="number" class="room-param-input param-input" name="humidity" value="<?php if (!empty($room)) echo $room['custom_humidity'] ?>" required hidden>
+            <input class="room-param-input param-input" name="humidity" value="<?php if (!empty($room)) echo $room['custom_humidity'] ?>" pattern="[0-9]{1,2}" required hidden>
         </div>
         <button id="add-template-button" class="center-button param-input" type="button" hidden> Choose template </button>
         <div id="templates-in-room" hidden>
@@ -48,17 +48,17 @@
             <?php endforeach; ?>
         </div>
     </div>
-    <button id="edit-button" class="edit center-button"> Edit </button>
+    <button class="edit edit-button center-button"> Edit </button>
 </form>
 
 <script>
     $(function() {
         var id = $('#room-id').val();
         if (!id) {
-            active($("#edit-button").parent());
+            active($(".edit-button").parent());
         }
 
-        $('body').on('click', '#edit-button', function () {
+        $('body').on('click', '.edit-button', function () {
             if ($(this).hasClass('edit')) {
                 return active($(this).parent());
             }

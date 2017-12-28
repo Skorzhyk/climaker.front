@@ -15,14 +15,14 @@
             <input class="user-input" name="telephone_number" value="<?php echo $user['telephone_number'] ?>" placeholder="Telephone number" required>
         </div>
         <div class="user-input">
-            <input class="user-input" name="current_password" placeholder="Current password" required>
+            <input class="user-input" name="current_password" type="password" placeholder="Current password" required>
         </div>
         <div class="user-input">
-            <input class="user-input" name="new_password" placeholder="New password">
+            <input class="user-input" name="new_password" type="password" placeholder="New password">
         </div>
         <div id="response">
             <?php echo $response ?>
         </div>
     </div>
-    <button id="main-button"> Save </button>
+    <button class="center-button"> Save </button>
 </form>

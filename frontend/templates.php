@@ -17,20 +17,20 @@
                     <div class="current">
                         <?php echo $template['temperature'] . '°C' ?>
                     </div>
-                    <input class="template-param-input param-input" name="temperature" value="<?php echo $template['temperature'] ?>" required hidden>
+                    <input class="template-param-input param-input" name="temperature" value="<?php echo $template['temperature'] ?>" pattern="[0-9]{1,2}" required hidden>
                 </div>
                 <div class="template-param">
                     <div class="template-param-name"> Humidity </div>
                     <div class="current">
                         <?php echo $template['humidity'] . ' %' ?>
                     </div>
-                    <input class="template-param-input param-input" name="humidity" value="<?php echo $template['humidity'] ?>" required hidden>
+                    <input type="number" class="template-param-input param-input" name="humidity" value="<?php echo $template['humidity'] ?>" pattern="[0-9]{1,2}" required hidden>
                 </div>
             </div>
         </div>
-        <button id="edit-button" class="edit center-button"> Edit </button>
+        <button class="edit edit-button center-button"> Edit </button>
         <a href="/actions/deleteTemplate.php?id=<?php echo $template['id'] ?>">
-            <button id="delete-template-button" type="button"> Delete </button>
+            <button class="delete-template-button" type="button"> Delete </button>
         </a>
     </form>
 <?php endforeach; ?>
@@ -43,22 +43,24 @@
         <div class="template-params">
             <div class="template-param">
                 <div class="template-param-name"> Temperature </div>
-                <input type="number" class="template-param-input param-input" name="temperature" required hidden>
+                <input class="template-param-input param-input" name="temperature" pattern="[0-9]{1,2}" required hidden>
             </div>
             <div class="template-param">
                 <div class="template-param-name"> Humidity </div>
-                <input type="number" class="template-param-input param-input" name="humidity" required hidden>
+                <input class="template-param-input param-input" name="humidity" pattern="[0-9]{1,2}" required hidden>
             </div>
         </div>
     </div>
-    <button id="edit-button" class="edit center-button"> Add </button>
+    <button class="edit edit-button center-button"> Add </button>
 </form>
 
 <script>
     $(function() {
-        $('body').on('click', '#edit-button', function () {
+        $('body').on('click', '.edit-button', function () {
             if ($(this).hasClass('edit')) {
-                return active($(this).parent());
+                elem = $(this).parent();
+                elem.find('.oneOfTemplates').show();
+                return active(elem);
             }
         });
     });

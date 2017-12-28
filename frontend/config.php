@@ -9,3 +9,8 @@
     <script src="/frontend/bootstrap/js/bootstrap.js"></script>
 </head>
 <body>
+    <script>
+         $(function() {
+            $('button').addClass('btn');
+         });
+    </script>
