@@ -31,7 +31,7 @@
             </div>
             <input class="room-param-input param-input" name="humidity" value="<?php if (!empty($room)) echo $room['custom_humidity'] ?>" pattern="[0-9]{1,2}" required hidden>
         </div>
-        <button id="add-template-button" class="center-button param-input" type="button" hidden> Choose template </button>
+        <button id="add-template-button" class="center-button param-input" type="button"> Choose template </button>
         <div id="templates-in-room" hidden>
             <?php foreach ($templates as $template) : ?>
                 <div class="template-in-room" title="<?php echo $template['name'] ?>">
@@ -53,6 +53,7 @@
 
 <script>
     $(function() {
+        $('#add-template-button').hide();
         var id = $('#room-id').val();
         if (!id) {
             active($(".edit-button").parent());
